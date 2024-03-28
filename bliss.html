@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- добавление иконки на вкладке-->
+    <link rel="icon" href="img/logo-header.jpg" type="image/x-png">
+
+    <!-- подключение шрифтов-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!--подключение стилей-->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="stylesheet" href="css/scrollToTop.css">
+
+
+    <title>Bliss - Студия красоты и SPA-программа</title>
+
+
+</head>
+<body>
+
+<div class="stt stt__block_black"></div>
+
+
+<div class="header">
+    <div class="container">
+        <div class="header-line">
+            <button id="burger" class="burger">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="header-line__logo">
+                <a href="#">
+                    <img class="img-logo" src="img/logo.png" alt="">
+                </a>
+            </div>
+            <div class="navigation">
+                <div class="nav">
+                    <a class="nav-item" href="production.html">Услуги</a>
+                    <button id="specialists" class="nav-item">Специалисты</button>
+                    <button id="gallery" class="nav-item">Галерея</button>
+                    <button id="about" class="nav-item">О нас</button>
+                </div>
+            </div>
+            <div class="phone">
+                <div class="phone__holder">
+                    <div class="phone__image">
+                        <img src="img/phone.png" alt="">
+                    </div>
+                    <div class="phone__number">
+                        <a class="num">+7 (913) 464-16-13</a>
+                    </div>
+                </div>
+                <div class="phone__text">
+                    Свяжитесь с нами для<br> бронирования
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="header-down">
+    <div class="container">
+        <div class="header-mod">
+            <div class="header-title">
+                Студия красоты
+                <div class="header-subtitle">
+                    и SPA-программа
+                </div>
+            </div>
+            <div class="header-button">
+                <button class="header-btn" id="open-modal-btn">Записаться</button>
+            </div>
+
+            <div class="modal" id="my-modal">
+                <div class="modal__box">
+                    <button class="modal__close-btn" id="close-my-modal-btn">
+                        <svg width="23" height="25" viewBox="0 0 23 25" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.09082 0.03125L22.9999 22.0294L20.909 24.2292L-8.73579e-05 2.23106L2.09082 0.03125Z"
+                                  fill="#333333"/>
+                            <path d="M0 22.0295L20.9091 0.0314368L23 2.23125L2.09091 24.2294L0 22.0295Z"
+                                  fill="#333333"/>
+                        </svg>
+                    </button>
+                    <div class="model-text">
+                        <h2>Позвоните чтобы записаться!</h2>
+
+                        <p>
+                            +7 (913) 464-16-13
+                        </p>
+                        <h2>WhatsApp!!!</h2>
+                        <p>
+                            +7 (913) 457-07-38
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="our-services">
+    <div class="container">
+        <div class="container-services">
+            <div class="provided">
+                <div class="title">
+                    Что вас ждет в нашем салоне
+                </div>
+            </div>
+            <div class="services-items">
+                <div class="services-items__image">
+                    <img src="img/img_1.png">
+                    <img src="img/img_2.png">
+                    <img src="img/img_3.png">
+                </div>
+                <div class="services-items__card-items">
+                    <div class="services-items__card">
+                        <div class="services-items__card-img">
+                            <img class="card-img-services" src="img/massage.png">
+                        </div>
+                        <div class="services-items__card-text">
+                            Массаж - терапевтический метод, представляющий собой совокупность приёмов механического и
+                            рефлекторного воздействия на ткани и органы.
+                        </div>
+                    </div>
+                    <div class="services-items__card">
+                        <div class="services-items__card-img">
+                            <img class="card-img-services" src="img/spa.png">
+                        </div>
+                        <div class="services-items__card-text">
+                            комплекс процедур направленный на расслабление организма, его оздоровление и очищение с
+                            помощью
+                            различных методик.
+                        </div>
+                    </div>
+                    <div class="services-items__card">
+                        <div class="services-items__card-img">
+                            <img class="card-img-services" src="img/barrel.png">
+                        </div>
+                        <div class="services-items__card-text">
+                            Фитобочка — метод целебного воздействия на организм человека с помощью пара и лекарственных
+                            трав.
+                        </div>
+                    </div>
+                    <div class="services-items__card">
+                        <div class="services-items__card-img">
+                            <img class="card-img-services" src="img/relax.png">
+                        </div>
+                        <div class="services-items__card-text">
+                            Лазерная эпиляция - современные лазерные технологии позволяют достичь желаемого эффекта,
+                            особой популярностью пользуется диодный лазер.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="product">
+    <div class="container">
+        <div class="product-line">
+            <div class="product-name">
+                <div id="news" class="title-link">
+                    Услуги
+                </div>
+                <div class="button-items">
+                    <div class="tabs-items">
+                        <button class="btn-product">Массаж</button>
+                        <button class="btn-product">SPA-программа</button>
+                        <button class="btn-product">Аппаратная коррекция фигуры</button>
+                    </div>
+                </div>
+            </div>
+            <div class="tab__body">
+                <div class="product-block">
+                    <div class="tabs active">
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img" src="img/massage_1.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                Общий массаж всего тела
+                            </div>
+                            <div class="card-item__desc">
+                                Классический массаж – отличное средство для укрепления здоровья, расслабления тела,
+                                профилактики заболеваний.
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img" src="img/massage_2.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                Массаж антицеллюлитный
+                            </div>
+                            <div class="card-item__desc">
+                                Антицеллюлитный массаж выполняется основном в тех областях тела, которые наиболее
+                                поражаются целлюлитом
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img" src="img/massage_3.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                Массаж спина+шея
+                            </div>
+                            <div class="card-item__desc">
+                                Нарушается кровообращение в сосудах позвоночного столба, а это чревато нарушениями
+                                мозгового кровообращения.
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img" src="img/produc/spa-программа_2/spa1.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                Тропический микс
+                            </div>
+                            <div class="card-item__desc">
+                                Прогрев в кедровой бочке с фитопаром на основе алтайских трав (хорошо расслабляет и
+                                успокаивает нервную систему)
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img" src="img/produc/spa-программа_2/spa2.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                Горячий шоколад
+                            </div>
+                            <div class="card-item__desc">
+                                Наносим на тело гипоаллергенный сахарный скрабом «Карамель» (смягчает и питает кожу,
+                                снабжая ее полезными веществами).
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img" src="img/produc/spa-программа_2/spa3.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                Лёд и пламя
+                            </div>
+                            <div class="card-item__desc">
+                                Охлаждающее обертывание с применением маски «Гель-эластик». Для подтягивания кожи и
+                                уменьшения растяжек.)
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs">
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img"
+                                     src="img/produc/Hardware%20body%20correction_3/vacuum_roller_massage.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                Вакуумно-роликовый массаж
+                            </div>
+                            <div class="card-item__desc">
+                                Первый результат вакуумно-роликового массажа становится заметен в середине назначенного
+                                курса.
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img"
+                                     src="img/produc/Hardware%20body%20correction_3/RF_lifting.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                RF - лифтинг
+                            </div>
+                            <div class="card-item__desc">
+                                терапия возрастных изменений, основанная на
+                                радиоволновом методе разогрева глубоких слоев кожи...
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="card-items">
+                            <div class="card-item">
+                                <img class="card-item__img"
+                                     src="img/produc/Hardware%20body%20correction_3/cavitation.jpg">
+                            </div>
+                            <div class="card-item__text">
+                                Кавитация
+                            </div>
+                            <div class="card-item__desc">
+                                Кавитация — это косметическая процедура, принцип действия которой заключается в
+                                разрушении клеток...
+                            </div>
+                            <div class="card-item__button">
+                                <a class="card-item__btn" href="production.html">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="all-production">
+                <a href="production.html" class="all-production-item">Посмотреть все услуги</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="gallery">
+    <div class="container">
+        <div class="gallery-item">
+            <div class="title-gallery">
+                Галерея фотографий нашего салона
+            </div>
+            <div class="slide hi-slide">
+                <div class="hi-prev"></div>
+                <div class="hi-next"></div>
+                <ul>
+                    <li><img src="img/gallery_1.jpg"></li>
+                    <li><img src="img/gallery_2.jpg"></li>
+                    <li><img src="img/gallery_3.jpg"></li>
+                    <li><img src="img/gallery_4.jpg"></li>
+                    <li><img src="img/gallery_5.jpg"></li>
+                    <li><img src="img/gallery_6.jpg"></li>
+                    <li><img src="img/gallery_7.jpg"></li>
+                </ul>
+            </div>
+            <div class="gallery-controls"></div>
+        </div>
+    </div>
+</div>
+
+<div class="gallery">
+    <div class="container">
+        <div class="photo">
+            <div id="image" class="photo-item">
+                <img class="img-phote" src="img/gallery_1.jpg" alt="">
+                <img class="img-phote" src="img/gallery_2.jpg" alt="">
+                <img class="img-phote" src="img/gallery_3.jpg" alt="">
+                <img class="img-phote" src="img/gallery_4.jpg" alt="">
+                <img class="img-phote" src="img/gallery_5.jpg" alt="">
+                <img class="img-phote" src="img/gallery_6.jpg" alt="">
+                <img class="img-phote" src="img/gallery_7.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="team-slider">
+    <div class="container">
+        <div class="text-team">
+            Наша команда
+        </div>
+        <div class="slide-container">
+            <div class="slide-content">
+                <div class="card-wrapper">
+                    <div class="cards">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="img/face_1.jpg" alt="" class="img-card">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Самуйлова Дарья</h2>
+                            <p class="desc">Мастер по спа и аппаратной коррекции фигуры
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cards ">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="img/face_2.jfif" alt="" class="img-card">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Агеева Лариса</h2>
+                            <p class="desc">Косметолог эстетист, мастер по спа и аппаратной коррекции фигуры.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="cards">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="img/face_3.jpg" alt="" class="img-card">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name">Савина Лилия</h2>
+                            <p class="desc">Мастер по лазерной апелляции и аппаратной коррекции фигуры.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="flooter">
+    <div class="container">
+        <div class="flooter-items">
+            <div class="flooter-item">
+                <img class="img-item" src="img/logo.png">
+            </div>
+            <div class="group-text">
+                <div class="flooter-time">
+                    Ежедневно с 10:00 до 22:00
+                </div>
+                <div class="flooter-phone">
+                    +7 (913) 464-16-13
+                </div>
+                <div class="flooter-text">
+                    Открыто по предварительной записи
+                </div>
+                <div class="social">
+                    <a href="https://www.instagram.com/bliss_nsk?igsh=cGRxMHU5MHJ2ZWYx">
+                        <img class="img-footer" src="img/ins.png">
+                    </a>
+                    <a href="https://vk.com/public211040824">
+                        <img class="img-footer" src="img/vk.png">
+                    </a>
+                    <a href="https://api.whatsapp.com/send/?phone=79134641613&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%0A%0A%D0%9F%D0%B8%D1%88%D1%83+%D1%81+%D0%92%D0%B0%D1%88%D0%B5%D0%B3%D0%BE+%D1%81%D0%B0%D0%B9%D1%82%D0%B0%0A%0A&type=phone_number&app_absent=0">
+                        <img class="img-footer" src="img/wats.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--перемещение по кнопкам по координатам Y-->
+<script src="js/scrollToY.js"></script>
+
+<!--бургер меню подключение-->
+<script src="js/burger.js"></script>
+
+<script src="js/scrollToTop-min.js"></script>
+
+<!--подключение кода Jquery-->
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="js/jquery.hislide.min.js"></script>
+
+
+<script src="js/swiper-bundle.min.js"></script>
+
+
+<script>
+    $('.slide').hiSlide();
+</script>
+<script defer src="js/index.js"></script>
+<script src="js/services.js"></script>
+
+</body>
+</html>
