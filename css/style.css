@@ -1,0 +1,1416 @@
+/*============================== ОБНУЛЕНИЕ СТРАНИЦЕ =======================================*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none
+}
+
+a:focus, a:active {
+    outline: none
+}
+
+nav, footer, header, aside {
+    display: block
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button, textarea {
+    font-family: inherit
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button {
+    -moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+
+/*=============================== РАБОТА С ФАЙЛОМ ===================================*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 100px;
+    background: #4A2424 0 0/ auto 100px;
+}
+
+/*====================== БУРГЕР МЕНЮ ======================*/
+.burger {
+    display: none;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.burger span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #F7E5B6;
+    left: 5px;
+    -webkit-transition: opacity .5s, background-color .5s, -webkit-transform .5s;
+    transition: opacity .5s, background-color .5s, -webkit-transform .5s;
+    -o-transition: transform .5s, opacity .5s, background-color .5s;
+    transition: transform .5s, opacity .5s, background-color .5s;
+    transition: transform .5s, opacity .5s, background-color .5s, -webkit-transform .5s;
+}
+
+.burger span:nth-child(1) {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+}
+
+.burger span:nth-child(3) {
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+}
+
+.header.open .burger span {
+    background-color: #F7E5B6;
+}
+
+.header.open .burger span:nth-child(1) {
+    -webkit-transform: translateY(0) rotate(45deg);
+    -ms-transform: translateY(0) rotate(45deg);
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .burger span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .burger span:nth-child(3) {
+    -webkit-transform: translateY(0) rotate(-45deg);
+    -ms-transform: translateY(0) rotate(-45deg);
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+/*========================= ШАПКА =========================*/
+
+
+.header-line {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 6px 0 33px 0;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.navigation {
+    padding: 60px 0 0 0;
+}
+
+
+.nav-item {
+    color: #F7E5B6;
+    background: #4A2424;
+    margin: 0 30px 0 0;
+}
+
+.img-logo {
+    height: 58px;
+    width: 90px;
+}
+
+.phone__holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #F7E5B6;
+    padding: 0 0 10px 0;
+    gap: 10px;
+}
+
+.phone__number {
+    color: #F7E5B6;
+    font-size: 18px;
+    padding: 5px 0 0 0;
+}
+
+.phone__text {
+    color: #F7E5B6;
+    padding: 5px 0 0 0;
+    line-height: 1.5;
+}
+
+/* ================================== МОДАЛЬНОЕ ОКНО =====================================*/
+
+.btn {
+    font-size: 20px;
+    color: black;
+    background: -webkit-gradient(linear, right top, left top, from(#fceabb), color-stop(#f8b500), to(#fceabb));
+    background: -o-linear-gradient(right, #fceabb, #f8b500, #fceabb);
+    background: linear-gradient(to left, #fceabb, #f8b500, #fceabb);
+    padding: 16px 190px;
+    border-radius: 130px 0 130px 0;
+    background-size: 200%;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.btn:hover {
+    background-position: right;
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 99998;
+    background-color: rgba(0, 0, 0, .3);
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: auto;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .4s, visibility .4s;
+    -o-transition: opacity .4s, visibility .4s;
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal__box {
+    position: relative;
+    max-width: 500px;
+    padding: 45px;
+    z-index: 1;
+    margin: 30px 15px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 0px 17px -7px rgba(34, 60, 80, 0.2);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition: -webkit-transform .8s;
+    transition: -webkit-transform .8s;
+    -o-transition: transform .8s;
+    transition: transform .8s;
+    transition: transform .8s, -webkit-transform .8s;
+}
+
+.modal__close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    border: none;
+    background-color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modal__close-btn svg path {
+    -webkit-transition: fill .4s;
+    -o-transition: fill .4s;
+    transition: fill .4s;
+}
+
+.modal__close-btn:hover svg path {
+    fill: #FFF3D1;
+}
+
+.modal__close-btn:active svg path {
+    fill: rgb(186, 53, 0);
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.open .modal__box {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.model-text h2 {
+    font-size: 20px;
+    padding: 15px 0 10px 0;
+    font-weight: bold;
+}
+
+.model-text p {
+    font-size: 18px;
+}
+
+/* ================================== НИЖНЯЯ ШАПКА =====================================*/
+
+
+.header-down {
+    background-image: url(../img/header.jpg);
+    height: 800px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.header-title {
+    font-size: 45px;
+    text-transform: uppercase;
+    background: -o-linear-gradient(45deg, #FFF7AB 33%, #F9B233 66%);
+    background: linear-gradient(45deg, #FFF7AB 33%, #F9B233 66%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    display: table;
+}
+
+.header-btn {
+    font-size: 15px;
+    color: black;
+    background: -webkit-gradient(linear, right top, left top, from(#fceabb), color-stop(#f8b500), to(#fceabb));
+    background: -o-linear-gradient(right, #fceabb, #f8b500, #fceabb);
+    background: linear-gradient(to left, #fceabb, #f8b500, #fceabb);
+    padding: 16px 170px;
+    border-radius: 130px 0 130px 0;
+    background-size: 200%;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+}
+
+.header-btn:hover {
+    background-position: right;
+}
+
+.header-mod {
+    padding: 300px 0 0 0;
+}
+
+.header-button {
+    padding: 30px 0 0 0;
+}
+
+/*======================================ЧТО ПРЕДОСТАВЛЯЕМ========================================*/
+
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    padding: 40px 0 60px 0;
+    font-weight: bold;
+}
+
+.container-services {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-img-services {
+    width: 85px;
+    height: 81px;
+}
+
+.services-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 60px;
+}
+
+.services-items__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 45px;
+}
+
+.services-items__card {
+    height: 225px;
+    width: 272px;
+    border: 1px solid black;
+    text-align: center;
+    padding: 30px 15px 15px 15px;
+}
+
+.services-items__card-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px 45px;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+.services-items__card-img {
+    padding: 0 0 20px 0;
+}
+
+/*====================================== УСЛУГИ ========================================*/
+
+
+.title-link {
+
+    font-size: 40px;
+}
+
+.product-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 163px 0 55px 0;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.card-item__img {
+    width: 266px;
+    height: 266px;
+    border-radius: 50%;
+}
+
+.tabs-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 32px;
+}
+
+.btn-product {
+    color: black;
+    background: #FFF3D1;
+    padding: 10px 20px 10px 20px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.btn-product:hover {
+    background: #705554;
+}
+
+.btn-product:active {
+    background: #705554;
+}
+
+.card-items {
+    background: rgba(93, 46, 46, 0.7);
+    border-radius: 10px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 31.333%;
+    flex: 0 1 31.333%;
+    text-align: center;
+    padding: 40px;
+}
+
+.tabs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 33px;
+    -webkit-transform: translatex(25px);
+    -ms-transform: translatex(25px);
+    transform: translatex(25px);
+    display: none;
+}
+
+.tabs.active {
+    -webkit-transform: translatex(0);
+    -ms-transform: translatex(0);
+    transform: translatex(0);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: 1s ease;
+    -o-transition: 1s ease;
+    transition: 1s ease;
+
+}
+
+.card-item__text {
+    font-weight: bold;
+    padding: 25px 0 10px 0;
+    font-size: 18px;
+}
+
+.card-item__desc {
+    background: wheat;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.card-item__btn {
+    color: black;
+    position: relative;
+    left: 90px;
+    bottom: -50px;
+    z-index: 1;
+    background: #927C7C;
+    padding: 10px 50px;
+    -webkit-box-shadow: -7px 10px 3px #775B5B;
+    box-shadow: -7px 10px 3px #775B5B;
+    border-radius: 30px 30px 30px 30px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.all-production {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 70px 0 0 0;
+}
+
+.all-production-item {
+
+    color: black;
+    background: -webkit-gradient(linear, right top, left top, from(wheat), color-stop(#FFF3D1), to(wheat));
+    background: -o-linear-gradient(right, wheat, #FFF3D1, wheat);
+    background: linear-gradient(to left, wheat, #FFF3D1, wheat);
+    padding: 22px 100px 22px 100px;
+    border-radius: 130px 0 130px 0;
+    background-size: 200%;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    font-size: 20px;
+}
+
+.all-production-item:hover {
+    background-position: right;
+}
+
+/*====================================== ГАЛЕРЕЯ ФОТОГРАФИЙ ========================================*/
+
+
+.hi-slide {
+    position: relative;
+    width: 754px;
+    height: 292px;
+    border-radius: 50px;
+    margin: 115px auto 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.hi-slide .hi-prev,
+.hi-slide .hi-next {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    -webkit-transition: all 0.7s;
+    -o-transition: all 0.7s;
+    transition: all 0.7s;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.hi-slide .hi-prev:hover,
+.hi-slide .hi-next:hover {
+    opacity: 1;
+    background-color: white;
+}
+
+.hi-slide .hi-prev {
+    left: -57px
+}
+
+.hi-slide .hi-prev:before {
+    content: '<';
+    z-index: 5;
+}
+
+.hi-slide .hi-next {
+    right: -60px;
+}
+
+.hi-slide .hi-next:before {
+    content: '>';
+}
+
+.hi-slide . ul {
+    list-style: none;
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 0;
+    padding: 0;
+}
+
+.hi-slide > ul > li {
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 377px;
+    top: 147px;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 3px solid white;
+    cursor: pointer;
+    background-color: #333;
+}
+
+.hi-slide > ul > li > img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
+
+.title-gallery {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 100px 0 30px 0;
+}
+
+/*=================================== ГАЛЕРЕЯ,КОТОРААЯ ПОЯВЛЯЕТСЯ <700px ================================*/
+.photo-item {
+    text-align: center;
+}
+
+.img-phote {
+    height: 350px;
+    width: 330px;
+}
+
+.photo {
+    display: none;
+}
+
+/*====================================== НАША КОМАНДА ========================================*/
+
+
+.team-slider {
+    margin: 70px 0 0 0;
+    background-color: #FFF3D1;
+    height: 650px;
+}
+
+.text-team {
+    font-size: 40px;
+    font-weight: 500;
+    text-align: center;
+    padding: 60px 0 60px 0;
+
+}
+
+.card-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.slide-container {
+    background-color: #FFF3D1;
+}
+
+.cards {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 31.333%;
+    flex: 0 1 31.333%;
+    border-radius: 25px;
+    background-color: #fff;
+}
+
+.image-content,
+.card-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 10px 14px;
+}
+
+.image-content {
+    position: relative;
+    row-gap: 5px;
+    padding: 25px 0;
+
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #4A2424;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #4A2424;
+}
+
+.overlay::after {
+    border-radius: 0 25px 0 0;
+    background-color: #fff;
+}
+
+.card-image {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+
+.card-image .img-card {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #4A2424;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+    padding: 0 0 10px 0;
+    z-index: 99;
+}
+
+.desc {
+    font-size: 14px;
+    color: #707070;
+    text-align: center;
+}
+
+/*=====================  ПОДВАЛ  ==============================*/
+
+
+.flooter {
+    margin: 0 0 0 0;
+    background-color: #4A2424;
+    min-height: 400px;
+}
+
+.img-item {
+    height: 100px;
+    width: 160px;
+}
+
+.flooter-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 315px;
+}
+
+.flooter-item {
+    padding: 94px 0 0 0;
+}
+
+
+.group-text {
+    padding: 38px 0 0 0;
+}
+
+
+.flooter-time {
+    text-align: center;
+    color: #FFF3D1;
+    font-size: 24px;
+    padding: 0 0 13px 0;
+}
+
+.flooter-phone {
+    text-align: center;
+    color: #FFF3D1;
+    font-size: 20px;
+}
+
+.flooter-text {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 0 20px 0;
+}
+
+.social {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.img-footer {
+    height: 61px;
+    width: 61px;
+}
+
+/*================================= АДАПТАЦИЯ САЙТА ==================================*/
+
+@media (max-width: 1400px) {
+    .header-line {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+    .services-items__image {
+        display: none;
+    }
+
+    .services-items__card-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 30px 137px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1100px) {
+    .burger {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        left: -350px;
+        top: 0;
+        width: 350px;
+        background-color: #4A2424;
+        padding: 210px 20px 20px 20px;
+        -webkit-transition: -webkit-transform .5s;
+        transition: -webkit-transform .5s;
+        -o-transition: transform .5s;
+        transition: transform .5s;
+        transition: transform .5s, -webkit-transform .5s;
+    }
+
+    .nav-item {
+        display: block;
+        color: white;
+        font-size: 21px;
+        padding: 10px 0;
+    }
+
+    .phone {
+        position: absolute;
+        left: -350px;
+        top: 0;
+        width: 350px;
+        background-color: #4A2424;
+        padding: 100px 20px 20px 20px;
+        -webkit-transition: -webkit-transform .5s;
+        transition: -webkit-transform .5s;
+        -o-transition: transform .5s;
+        transition: transform .5s;
+        transition: transform .5s, -webkit-transform .5s;
+    }
+
+    .header-line {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+        justify-content: space-evenly;
+    }
+
+    .header.open .nav {
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    .header.open .phone {
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+
+    .header-mod {
+        padding: 70px 0 0 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .header-down {
+        height: 500px;
+    }
+
+    .header-title {
+        font-size: 30px;
+    }
+
+    .header-button {
+        padding: 20px 0 0 0;
+    }
+
+    .header-btn {
+        padding: 10px 100px;
+    }
+
+    .services-items__image {
+        display: none;
+    }
+
+    .services-items__card-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 30px 137px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+    .product-name {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 163px 0 55px 0;
+        gap: 65px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+
+    .card-items {
+        background: rgba(93, 46, 46, 0.7);
+        border-radius: 10px;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 29.333%;
+        flex: 0 1 29.333%;
+        text-align: center;
+        padding: 15px 10px 0px 10px;
+    }
+
+    .card-item__img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+    }
+
+    .card-item__text {
+        font-weight: bold;
+        padding: 15px 0 10px 0;
+        font-size: 14px;
+    }
+
+    .card-item__btn {
+        color: black;
+        position: relative;
+        left: 50px;
+        bottom: -18px;
+        z-index: 1;
+        background: #927C7C;
+        padding: 10px 50px;
+        -webkit-box-shadow: -7px 10px 3px #775B5B;
+        box-shadow: -7px 10px 3px #775B5B;
+        border-radius: 30px 30px 30px 30px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .tabs {
+        display: -webkit-box;
+        display: -ms-flexbox;
+
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 3px;
+        -webkit-transform: translatex(25px);
+        -ms-transform: translatex(25px);
+        transform: translatex(25px);
+        display: none;
+    }
+
+    .flooter-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 800px) {
+    .header-down {
+        height: 300px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .services-items__card-items {
+        gap: 30px 50px;
+    }
+
+    .title-link {
+        font-size: 25px;
+    }
+
+    .card-item__btn {
+        color: black;
+        position: relative;
+        left: 17px;
+        bottom: -18px;
+        z-index: 1;
+        background: #927C7C;
+        padding: 10px 50px;
+        -webkit-box-shadow: -7px 10px 3px #775B5B;
+        box-shadow: -7px 10px 3px #775B5B;
+        border-radius: 30px 30px 30px 30px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .title-gallery {
+        font-size: 20px;
+        padding: 60px 0 30px 0;
+    }
+
+    .hi-slide {
+        margin: 0 0 0 0;
+    }
+
+    .hi-slide .hi-next {
+        right: 180px;
+    }
+
+    .hi-slide .hi-prev, .hi-slide .hi-next {
+        top: 0;
+    }
+
+    .hi-slide .hi-prev {
+        left: 180px;
+    }
+
+    .card-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .card {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 1 30.333%;
+        flex: 0 1 30.333%;
+    }
+
+    .text-team {
+        font-size: 30px;
+    }
+
+    .flooter-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .model-text h2 {
+        font-size: 16px;
+        padding: 15px 0 10px 0;
+        font-weight: bold;
+    }
+
+    .model-text p {
+        font-size: 14px;
+    }
+
+    .photo {
+        display: block;
+    }
+
+    .slide {
+        display: none;
+    }
+
+    .img-phote {
+        height: 200px;
+        width: 200px;
+    }
+
+    .name {
+        font-size: 14px;
+    }
+
+    .flooter-time {
+        font-size: 14px;
+    }
+
+    .flooter-phone {
+        font-size: 14px;
+    }
+
+    .flooter-text {
+        padding: 25px 0 20px 0;
+    }
+
+    .flooter-item {
+        padding: 55px 0 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-items__card {
+        height: 200px;
+        width: 220px;
+        padding: 10px 5px 5px 5px;
+    }
+
+    .product-name {
+        display: block;
+        text-align: center;
+        padding: 35px 0 25px 0;
+    }
+
+    .tabs-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        /* gap: 20px; */
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px 0 0 0;
+    }
+
+    .tabs {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: none;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 45px 5px;
+    }
+
+    .tabs.active {
+        -webkit-transform: translatex(0);
+        -ms-transform: translatex(0);
+        transform: translatex(0);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-transition: 1s ease;
+        -o-transition: 1s ease;
+        transition: 1s ease;
+        display: flex;
+    }
+
+    .all-production-item {
+        color: black;
+        background: -webkit-gradient(linear, right top, left top, from(wheat), color-stop(#FFF3D1), to(wheat));
+        background: -o-linear-gradient(right, wheat, #FFF3D1, wheat);
+        background: linear-gradient(to left, wheat, #FFF3D1, wheat);
+        padding: 15px 70px 22px 70px;
+        border-radius: 130px 0 130px 0;
+        background-size: 200%;
+        -webkit-transition: .5s;
+        -o-transition: .5s;
+        transition: .5s;
+        font-size: 20px;
+    }
+
+    .text-team {
+        font-size: 25px;
+    }
+
+    .title {
+        font-size: 20px;
+        padding: 20px 0 20px 0;
+    }
+
+    .services-items__card-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .header {
+        height: 70px;
+    }
+
+    .header-title {
+        font-size: 20px;
+    }
+
+    .services-items__card-text {
+        font-size: 11px;
+    }
+
+    .services-items__card {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .header-down {
+        height: 220px;
+    }
+
+    .header-btn {
+        font-size: 14px;
+        padding: 5px 60px;
+    }
+
+    .title {
+        font-size: 14px;
+        padding: 20px 0 20px 0;
+    }
+
+    .services-items__card {
+        display: flex;
+        flex-direction: column;
+        height: 148px;
+        width: 170px;
+        padding: 10px 5px 5px 5px;
+    }
+
+    .card-img-services {
+        height: 40px;
+        width: 40px;
+    }
+
+    .title-link {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .btn-product {
+        padding: 5px 10px 10px 10px;
+    }
+
+    .all-production-item {
+        font-size: 14px;
+    }
+
+    .img-phote {
+        padding: 0 0 10px 0;
+    }
+
+    .text-team {
+        padding: 20px 0 20px 0;
+    }
+
+    .card-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .cards {
+        height: 300px;
+        width: 300px;
+    }
+
+    .team-slider {
+        margin: 15px 0 0 0;
+        background-color: #FFF3D1;
+        height: 1090px;
+    }
+
+    .flooter {
+        margin: 0 0 0 0;
+        background-color: #4A2424;
+        min-height: 400px;
+    }
+
+    .flooter-items {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        gap: 10px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    .tabs-items {
+        gap: 2px;
+        margin: 0 10px 0 10px;
+    }
+}
+
+@media (max-width: 400px) {
+
+
+    .title-gallery {
+        font-size: 16px;
+        padding: 40px 0 23px 0;
+    }
+
+
+}
+
+
+
+
+
